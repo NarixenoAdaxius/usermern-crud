@@ -9,7 +9,7 @@ const EditUserPage = () => {
   const { user } = state;
 
   const handleSubmit = async (formData) => {
-    await axios.put(`/api/users/${user._id}`, formData);
+    await axios.put(`http://localhost:5000/api/users/${user._id}`, formData);
     navigate('/');
   };
 

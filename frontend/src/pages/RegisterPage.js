@@ -7,8 +7,9 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (formData) => {
-    await axios.post('/api/users', formData);
+    await axios.post('http://localhost:5000/api/users', formData);
     navigate('/');
+   // navigate('/');
   };
 
   return (

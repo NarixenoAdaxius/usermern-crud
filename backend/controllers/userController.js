@@ -19,9 +19,7 @@ const getUsers = async (req, res) => {
 const createUser = async (req, res) => {
     const { firstName, lastName, age, birthday, contactNumber, address } = req.body;
 
-    if (!firstName || !lastName || !age || !birthday || !contactNumber || !address) {
-        return res.status(400).json({ message: 'All fields are required' });
-    }
+
 
     try {
         const user = new User({

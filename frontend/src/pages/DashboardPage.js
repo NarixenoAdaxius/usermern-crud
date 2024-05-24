@@ -9,14 +9,14 @@ const DashboardPage = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const { data } = await axios.get('/api/users');
+      const { data } = await axios.get('http://localhost:5000/api/users');
       setUsers(data);
     };
     fetchUsers();
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`/api/users/${id}`);
+    await axios.delete(`http://localhost:5000/api/users/${id}`);
     setUsers(users.filter(user => user._id !== id));
   };
 
